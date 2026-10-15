@@ -152,6 +152,9 @@ section[id]:target .inicio-conteudo h1 {
     text-align: center;
     margin-bottom: 10px;
 }
+#projetos {
+    background-color: #ffffff;
+}
 .subtitulo-secao {
     text-align: center;
     color: #666666;
