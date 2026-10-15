@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: #111827;
+    background: #dbeafe;
+}
+
+body {
+    min-height: 100vh;
+    padding: 36px 16px 56px;
+    background: #f3f4f6;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+body::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 230px;
+    background: linear-gradient(120deg, #111827 0%, #172554 55%, #1e3a8a 100%);
+    content: "";
+}
+
+body > form:first-of-type,
+body > h2,
+body > table,
+body > div {
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body > form:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 18px;
+    margin-bottom: 32px;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 14px 36px rgba(17, 24, 39, 0.16);
+}
+
+body > form:first-of-type::before {
+    grid-column: 1 / -1;
+    margin-bottom: 8px;
+    color: #111827;
+    content: "Abrir chamado";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+body > form:first-of-type label {
+    align-self: end;
+    color: #374151;
+    font-weight: 700;
+}
+
+body > form:first-of-type input:not([type="hidden"]),
+body > form:first-of-type select,
+body > form:first-of-type textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body > form:first-of-type textarea {
+    grid-column: 1 / -1;
+    min-height: 120px;
+    resize: vertical;
+}
+
+body > form:first-of-type input:focus,
+body > form:first-of-type select:focus,
+body > form:first-of-type textarea:focus,
+td select:focus {
+    border-color: #2563eb;
+    outline: 3px solid #bfdbfe;
+}
+
+body > form:first-of-type button,
+td button {
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body > form:first-of-type button {
+    grid-column: 1 / -1;
+}
+
+body > form:first-of-type button:hover,
+td button:hover {
+    transform: translateY(-2px);
+    background: #1d4ed8;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.24);
+}
+
+.bt-voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 9px 16px;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bt-voltar:hover {
+    transform: translateY(-2px);
+    background: #dbeafe;
+}
+
+body > h2 {
+    margin-bottom: 16px;
+    color: #111827;
+    font-size: 30px;
+}
+
+body > table {
+    display: block;
+    overflow-x: auto;
+    margin-bottom: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+body > table::before {
+    display: block;
+    padding: 18px 20px 8px;
+    color: #111827;
+    content: "Chamados registrados";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+body > table td {
+    min-width: 110px;
+    padding: 14px;
+    border-top: 1px solid #e5e7eb;
+    text-align: left;
+    vertical-align: top;
+}
+
+body > table td:nth-child(5) {
+    min-width: 220px;
+}
+
+body > table tr:hover td {
+    background: #f9fafb;
+}
+
+td select {
+    min-height: 40px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: white;
+    color: #1f2937;
+    font: inherit;
+}
+
+td button {
+    min-height: 40px;
+    padding: 7px 13px;
+}
+
+td form:last-child button {
+    border-color: #b91c1c;
+    background: #b91c1c;
+}
+
+td form:last-child button:hover {
+    background: #991b1b;
+}
+
+body > div {
+    padding: 24px 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+}
+
+body > div h3 {
+    margin-bottom: 12px;
+    color: #111827;
+    font-size: 22px;
+}
+
+body > div p {
+    display: inline-flex;
+    justify-content: space-between;
+    min-width: 180px;
+    margin: 6px 10px 0 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e40af;
+    font-weight: 700;
+}
+
+:where(a, button, select, input, textarea):focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 22px 12px 36px;
+    }
+
+    body > form:first-of-type {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 22px 18px;
+    }
+
+    body > form:first-of-type::before,
+    body > form:first-of-type textarea,
+    body > form:first-of-type button {
+        grid-column: 1;
+    }
+
+    body > h2 {
+        font-size: 25px;
+    }
+
+    body > div {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
