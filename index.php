@@ -61,7 +61,7 @@
             <h3>Quem sou eu?</h3>
             <p>
                 Meu nome é Sebastián Andrade e sou aluno
-                de Analise em desenvolvimento de Sistemas
+                de Analise em desenvolvimento de Sistemas.
             </p>
 
             <p>
