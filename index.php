@@ -183,6 +183,24 @@
                         Ver projeto →
                     </a>
                 </div>  
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        05
+                    </div>
+                    <h3>Helpdesk</h3>
+                    <p>
+                        Sistema para registrar chamados, acompanhar o status
+                        e organizar atendimentos de suporte.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="/projetos/helpdesk.php" class="link-projeto">
+                        Ver projeto →
+                    </a>
+                </div>
             </div>
         </section>
         <section id="contato" class="secao secao-destaque">
