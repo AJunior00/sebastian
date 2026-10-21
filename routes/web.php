@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../app/Http/Controllers/HelpdeskController.php';
+require_once __DIR__ . '/../app/Http/Controllers/Helpdesk.Controller.php';
+require_once __DIR__ . '/../app/Http/Controllers/PortfolioControllers.php';
 
 return [
     'GET' => [
