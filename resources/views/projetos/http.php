@@ -26,7 +26,10 @@ curl -i http://seudominio.devlook.xyz/chamados
 curl -i -X POST http://seudominio.devlook.xyz/chamados -H "Content-Type: application/json" -d '{"titulo":"Impressora falhando"}'
 curl -i http://seudominio.devlook.xyz/inexistente
 
-
+curl -i http://look.devlook.xyz/chamados
+curl -i -X POST http://look.devlook.xyz/chamados -H "Content-Type: application/json" -d '{"titulo":"Impressora falhando"}'
+curl -i http://look.devlook.xyz/inexistente
+*/
 
 
 ?>
