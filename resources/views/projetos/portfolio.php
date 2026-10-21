@@ -1,14 +1,3 @@
-<?php 
-    require __DIR__ . '/../../../config/conexao.php';
-    $sql = "CREATE TABLE IF NOT EXISTS teste (
-    id INT AUTO_INCREMENT PRIMARY KEY, 
-    nome VARCHAR (100) NOT NULL, 
-    idade INT NOT NULL
-    )";
-
-    $pdo->exec($sql);
-    ?>
-    
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
