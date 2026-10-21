@@ -1,5 +1,7 @@
 <?php
-require_once "helpdesk-func.php";
+require_once __DIR__ . '/../../../app/Models/Chamado.php';
+
+$modeloChamado = new Chamado();
 
 $mensagem = "";
 
@@ -7,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $acao = $_POST["acao"] ?? "";
 
    if ($acao === "cadastrar") {
-        $sucesso = cadastrarChamados(
+        $sucesso = $modeloChamado->cadastrarChamados(
             $_POST["nome"] ?? "",
             $_POST["setor"] ?? "",
             $_POST["equipamento"] ?? "",
@@ -19,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if ($acao === "atualizar") {
-        $sucesso = atualizarChamado(
+        $sucesso = $modeloChamado->atualizarChamado(
             (int) ($_POST["posicao"] ?? -1),
             $_POST["status"] ?? ""
         );
@@ -28,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if ($acao === "excluir") {
-        $sucesso = excluirChamado(
+        $sucesso = $modeloChamado->excluirChamado(
             (int) ($_POST["posicao"] ?? -1)
         );
 
@@ -38,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-$chamados = LerChamados();
-$relatorio = gerarRelatorio();
+$chamados = $modeloChamado->LerChamados();
+$relatorio = $modeloChamado->gerarRelatorio();
 
 function escapar($valor) {
     return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
@@ -51,7 +53,7 @@ function escapar($valor) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/helpdesk.css">
+    <link rel="stylesheet" href="/resources/css/helpdesk.css">
     <title>Chamados</title>
 </head>
 <body>
@@ -92,7 +94,7 @@ function escapar($valor) {
 
         <button type="submit">Enviar</button>
         
-        <a href="../index.php" class="bt-voltar">Voltar ao início</a>
+        <a href="/?rota=portfolio" class="bt-voltar">Voltar ao início</a>
 
     </form>
 
@@ -138,7 +140,7 @@ function escapar($valor) {
         <h3>Relatório de Atendimentos</h3>
         <p>Total de chamados: <?php echo $relatorio["total"]; ?></p>
         <p>Abertos: <?php echo $relatorio["abertos"]; ?></p>
-        <p>Em andamento: <?php echo $relatorio["em_andamento"]; ?></p>
+        <p>Em andamento: <?php echo $relatorio["andamento"]; ?></p>
         <p>Resolvido: <?php echo $relatorio["resolvidos"]; ?></p>
     </div>
 

@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["nome"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/notas-GET.css">
+    <link rel="stylesheet" href="/resources/css/notas-GET.css">
     <title>Desafio notas</title>
 </head>
 <body class="pagina-notas">

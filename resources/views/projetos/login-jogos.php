@@ -4,7 +4,7 @@ session_start();
 if (isset($_GET["sair"])) {
     session_unset();
     session_destroy();
-    header("Location: ../index.php");
+    header("Location: /?rota=portfolio");
     exit;
 }
 
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($usuario === "sebasandrefa" && $senha === "300609") {
         session_regenerate_id(true);
         $_SESSION["jogos_logado"] = true;
-        header("Location: jogos.php");
+        header("Location: /?rota=jogos");
         exit;
     }
 
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login-jogos.css">
+    <link rel="stylesheet" href="/resources/css/login-jogos.css">
     <title>Login para jogos</title>
 </head>
 <body class="pagina-login-jogos">
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <?php if ($erro !== "") { ?>
             <p role="alert"><?= htmlspecialchars($erro, ENT_QUOTES, "UTF-8") ?></p>
         <?php } ?>
-        <p><a class="voltar-inicio" href="../index.php">← Voltar ao início</a></p>
+        <p><a class="voltar-inicio" href="/?rota=portfolio">← Voltar ao início</a></p>
     </main>
 </body>
 </html>

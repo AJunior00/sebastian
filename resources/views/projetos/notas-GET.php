@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["nome"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/notas.css">
+    <link rel="stylesheet" href="/resources/css/notas.css">
     <title>Notas com GET</title>
 </head>
 <body class="pagina-notas">
@@ -97,6 +97,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["nome"])) {
             <?php } ?>
         </div>
     <?php } ?>
-    <p class="voltar-inicio"><a href="../index.php">← Voltar ao início</a></p>
+    <p class="voltar-inicio"><a href="/?rota=portfolio">← Voltar ao início</a></p>
 </body>
 </html>

@@ -2,7 +2,7 @@
 session_start();
 
 if (empty($_SESSION["jogos_logado"])) {
-    header("Location: login-jogos.php");
+    header("Location: /?rota=login-jogos");
     exit;
 }
 
@@ -42,7 +42,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/resources/css/index.css">
     <title>Cadastro de Jogos</title>
 </head>
 <body class="pagina-jogos">
@@ -96,8 +96,8 @@ try {
     </section>
 
     <p class="acoes-jogos">
-        <a class="voltar-inicio" href="../index.php">← Voltar ao início</a>
-        <a class="voltar-inicio" href="login-jogos.php?sair=1">Sair</a>
+        <a class="voltar-inicio" href="/?rota=portfolio">← Voltar ao início</a>
+        <a class="voltar-inicio" href="/?rota=login-jogos&amp;sair=1">Sair</a>
     </p>
 
 

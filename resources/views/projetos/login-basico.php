@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" || $_SERVER["REQUEST_METHOD"] === "GET
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login-jogos.css">
+    <link rel="stylesheet" href="/resources/css/login-jogos.css">
     <title>Login</title>
 </head>
 <body class="pagina-login-jogos">
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" || $_SERVER["REQUEST_METHOD"] === "GET
         <?php if ($mensagem !== "") { ?>
             <p class="login-mensagem" role="status"><?= htmlspecialchars($mensagem, ENT_QUOTES, "UTF-8") ?></p>
         <?php } ?>
-        <p><a class="voltar-inicio" href="../index.php">← Voltar ao início</a></p>
+        <p><a class="voltar-inicio" href="/?rota=portfolio">← Voltar ao início</a></p>
     </main>
 </body>
 </html>

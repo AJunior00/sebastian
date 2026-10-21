@@ -16,7 +16,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/idade.css">
+    <link rel="stylesheet" href="/resources/css/idade.css">
     
     <title>Verificador de idade</title>
 </head>
@@ -36,6 +36,6 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST"){
         <h2 class="resultado-idade"><?= htmlspecialchars($resultado, ENT_QUOTES, "UTF-8") ?></h2>
     </div>
     <?php } ?>
-    <p class="voltar-inicio"><a href="../index.php">← Voltar ao início</a></p>
+    <p class="voltar-inicio"><a href="/?rota=portfolio">← Voltar ao início</a></p>
     </body>
     </html>
