@@ -19,14 +19,7 @@ body {
 }
 
 body::before {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 0;
-    background: #fff;
-    content: "";
+    display: none;
 }
 
 body > form:first-of-type,
