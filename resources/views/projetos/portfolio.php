@@ -176,7 +176,7 @@
                     <div class="projeto-numero">
                         05
                     </div>
-                    <h3>Helpdesk</h3>
+                    <h3>Sistema Helpdesk para Gerenciar Chamados</h3>
                     <p>
                         Sistema para registrar chamados, acompanhar o status
                         e organizar atendimentos de suporte.
