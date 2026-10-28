@@ -120,6 +120,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
                 <option value="robosaldagem">Robô de Soldagem</option>
             </select>
 
-            
+            <label for="quantidade">Quantidade Produzida:</label>
+            <input type="number" name="quantidade" id="quantidade" min="1" required>
+
+            <button type="submit">Cadastrar Máquina</button>
+            </form>
+
+            <?php if ($mensagem): ?>
+            <p><?php echo escapar($mensagem); ?></p>
+            <?php endif; ?>
+
+            <h2>Máquinas Cadastradas</h2>
+            <ul>
+                
+            <?php foreach ($_SESSION["máquinas"] as $maquina): ?>
+                <li>
+                    <?php echo escapar($maquina->nome); ?> - 
+                    <?php echo escapar($maquina->operar()); ?> - 
+                    Produção: <?php echo escapar($maquina->getProducao()); ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
 
 ?>
