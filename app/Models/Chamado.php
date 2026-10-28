@@ -3,6 +3,7 @@
 class Chamado{
 
 public function LerChamados() {
+    
         $arquivo = __DIR__ . "/../dados/chamados.json";
 
         if(!file_exists($arquivo)){
